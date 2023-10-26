@@ -1,7 +1,7 @@
 import numpy as np
 
 def menu():
-    print("1-Array simples\n2-Array em Tupla\n3-Array em Matriz\n4-Função ndim e ndmin\n5-Separar Array\n6-Sair")
+    print("1-Array simples\n2-Array em Tupla\n3-Array em Matriz\n4-Função ndim e ndmin\n5-Operações de Array\n6-Sair")
     
 def escolha(n):
     if n==1:
@@ -42,6 +42,21 @@ def escolha(n):
         print(arr[1:2:3])
         print("final->array[-1]")
         print(arr[-1])
+        print("pega uma parte e continua, ex:array[2:]")
+        print(arr[2:])
+        print("pega uma parte e termina, ex:array[:2]")
+        print(arr[:2])
+        arr2 = np.array(['apple', 'banana', 'cherry'])
+        print("Usa o dtype para saber o tipo:", arr2.dtype, arr.dtype)
+        print("Conversão->arr.astype('i' ou 'S' ou 'f' ou 'u' ou 'U')")
+        arr = np.array([1.1, 2.1, 3.1])
+        print(arr)
+        newarr = arr.astype('i')
+        print(newarr)
+        print("FLOAT->INT",newarr.dtype)
+        newarr = arr.astype(bool)
+        print(newarr)
+        print("FLOAT->BOLLEAN",newarr.dtype)
         return 0
     elif n==6:
         return 1
